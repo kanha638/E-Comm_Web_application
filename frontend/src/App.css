@@ -1,0 +1,56 @@
+.nav-ul li {
+  display: inline-block;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.nav-ul {
+  background-color: grey;
+  margin-top: 0px;
+}
+.nav-ul li a {
+  color: black;
+  padding: 2px;
+  text-decoration: none;
+}
+.footer {
+  background-color: grey;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  text-align: center;
+}
+.signupform {
+  margin-left: 30%;
+  margin-top: 10%;
+  margin-bottom: 0%;
+  margin-right: 30%;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 9px;
+}
+.inp {
+  display: block;
+  margin: 25px;
+  padding: 5px;
+  width: 250px;
+  margin-right: 2%;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.inp-btn {
+  display: block;
+  margin: 25px;
+  padding: 5px;
+  width: 250px;
+  margin-right: 2%;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: blue;
+}
+.normal {
+  margin-left: 5%;
+}
+hr {
+  color: white;
+}
