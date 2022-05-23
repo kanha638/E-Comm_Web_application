@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
@@ -7,13 +7,13 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-  // //useEffect authentication if a user is logged in then he should not come back to signup page
-  // useEffect(() => {
-  //   const check = localStorage.getItem("user");
-  //   if (check) {
-  //     navigate("/");
-  //   }
-  // });
+  //useEffect authentication if a user is logged in then he should not come back to signup page and also user can not come to signup page with url
+  useEffect(() => {
+    const check = localStorage.getItem("user");
+    if (check) {
+      navigate("/");
+    }
+  });
 
   // Onclick Function after clicking the Button
   const val = async () => {
@@ -35,9 +35,11 @@ const SignUp = () => {
   };
 
   return (
-    <div className="signup">
-      <div className="signupform">
-        <h2 className="normal">SIGN UP </h2>
+    <div className="container1">
+      <div className="form">
+        <h2 className="normal">
+          <b>Sign Up </b>
+        </h2>
         <hr />
         <input
           type="text"

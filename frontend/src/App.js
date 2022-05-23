@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import SignUp from "./components/SignUp";
 import PrivateComponent from "./components/PrivateComponent";
+import Login from "./components/Login";
+import AddProduct from "./components/AddProduct";
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
         <Routes>
           <Route element={<PrivateComponent />}>
             <Route path="/" element={<h1>Homepage</h1>}></Route>
-            <Route path="/add" element={<h1>Add product webpage</h1>}></Route>
+            <Route path="/add" element={<AddProduct />}></Route>
             <Route
               path="/update"
               element={<h1>Update product webpage</h1>}
@@ -27,8 +29,10 @@ function App() {
           </Route>
 
           <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/login" element={<Login />}></Route>
         </Routes>
       </BrowserRouter>
+
       <Footer />
     </div>
   );

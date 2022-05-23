@@ -9,29 +9,36 @@ const Navbar = () => {
   };
   return (
     <div className="nav">
-      <ul className="nav-ul">
-        <li>
-          <Link to="/">Homepage</Link>
-        </li>
-        <li>
-          <Link to="/add">Add product</Link>
-        </li>
-        <li>
-          <Link to="/update">Update Product</Link>
-        </li>
-        <li>
-          <Link to="/profile">Profile</Link>
-        </li>
-        <li>
-          {check ? (
+      {check ? (
+        <ul className="nav-ul">
+          <li>
+            <Link to="/">Homepage</Link>
+          </li>
+          <li>
+            <Link to="/add">Add product</Link>
+          </li>
+          <li>
+            <Link to="/update">Update Product</Link>
+          </li>
+          <li>
+            <Link to="/profile">Profile</Link>
+          </li>
+          <li>
             <Link onClick={logout} to="/signup">
               LogOut
             </Link>
-          ) : (
+          </li>
+        </ul>
+      ) : (
+        <ul className="nav-ul right">
+          <li>
             <Link to="/signup">SignUp</Link>
-          )}
-        </li>
-      </ul>
+          </li>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        </ul>
+      )}
     </div>
   );
 };
