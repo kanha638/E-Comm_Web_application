@@ -38,6 +38,11 @@ app.post("/add-product", async (req, resp) => {
   resp.send(result);
 });
 
+// For getting all products list
+app.get("/products", async (req, resp) => {
+  let result = await Product.find();
+  resp.send(result);
+});
 app.get("/", (req, resp) => {
   resp.send("hii api is working ");
 });

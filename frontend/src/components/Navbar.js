@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 const Navbar = () => {
   let check = localStorage.getItem("user");
+
   const navigate = useNavigate();
   const logout = () => {
     localStorage.clear();
@@ -25,7 +26,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link onClick={logout} to="/signup">
-              LogOut
+              LogOut({})
             </Link>
           </li>
         </ul>

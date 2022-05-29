@@ -35,45 +35,47 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container1">
-      <div className="form">
-        <h2 className="normal">
-          <b>Sign Up </b>
-        </h2>
-        <hr />
-        <input
-          type="text"
-          className="inp"
-          placeholder="Enter Your Name"
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
-        />
+    <>
+      <div className="container1">
+        <div className="form">
+          <h2 className="normal">
+            <b>Sign Up </b>
+          </h2>
+          <hr />
+          <input
+            type="text"
+            className="inp"
+            placeholder="Enter Your Name"
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+          />
 
-        <input
-          type="text"
-          className="inp"
-          placeholder="Enter Your Email"
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-        />
-        <input
-          type="Password"
-          className="inp"
-          placeholder="Enter Your Password"
-          value={password}
-          onChange={(e) => {
-            setPassword(e.target.value);
-          }}
-        />
-        <button className="inp-btn" onClick={val}>
-          Register
-        </button>
+          <input
+            type="text"
+            className="inp"
+            placeholder="Enter Your Email"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+          <input
+            type="Password"
+            className="inp"
+            placeholder="Enter Your Password"
+            value={password}
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
+          <button className="inp-btn" onClick={val}>
+            Register
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
